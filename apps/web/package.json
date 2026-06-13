@@ -1,0 +1,20 @@
+{
+  "name": "web",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5173",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@repo/design-system": "*",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest",
+    "@vitejs/plugin-react": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}

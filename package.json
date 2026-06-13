@@ -1,0 +1,30 @@
+{
+  "name": "thing",
+  "version": "1.0.0",
+  "description": "a thing for many things",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davjohnsonGH/thing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/davjohnsonGH/thing/issues"
+  },
+  "homepage": "https://github.com/davjohnsonGH/thing#readme",
+  "devDependencies": {
+    "turbo": "^2.9.18"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "npm@11.6.2"
+}
