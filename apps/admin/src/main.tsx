@@ -4,16 +4,18 @@ import type { User } from "@repo/types";
 
 function App() {
   const user: User = {
-    id: "1",
-    name: "Frank",
-    email: "frank@example.com",
+    id: "2",
+    name: "Admin User",
+    email: "admin@example.com",
     role: "admin",
   };
+
   return (
     <div>
-      <h1>Hello {user.name}</h1>
-      <h1>Role {user.role}</h1>
-      <Button>Design System Button</Button>
+      <h1>Admin Portal</h1>
+      <p>{user.name}</p>
+
+      <Button>Delete User</Button>
     </div>
   );
 }

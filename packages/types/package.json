@@ -1,27 +1,22 @@
 {
-  "name": "@repo/design-system",
+  "name": "@repo/types",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "dependencies": {
-    "@repo/types": "*"
-  },
-  "devDependencies": {
-    "@repo/tsconfig": "*"
-  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     }
   },
-  "peerDependencies": {
-    "react": "^19.0.0"
-  },
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "latest",
+    "@repo/tsconfig": "*"
   }
 }
