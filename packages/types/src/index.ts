@@ -6,7 +6,7 @@ export const USER_ROLES = [
 
 export type UserRole =
   (typeof USER_ROLES)[number];
-  
+
 export interface User {
   id: string;
   name: string;

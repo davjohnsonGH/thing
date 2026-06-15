@@ -1,0 +1,20 @@
+{
+  "name": "@repo/mock-data",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts"
+    },
+    "./forms/user-profile": {
+      "import": "./src/forms/user-profile.json"
+    },
+    "./forms/contact-info": {
+      "import": "./src/forms/contact-info.json"
+    },
+    "./forms/permit-application": {
+      "import": "./src/forms/permit-application.json"
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "id": "user-profile",
+  "version": "1.0.0",
+  "title": "User Profile",
+  "description": "Basic account profile and user preferences.",
+  "fields": [
+    {
+      "type": "text",
+      "id": "displayName",
+      "label": "Display Name",
+      "placeholder": "John Doe",
+      "required": true,
+      "maxLength": 80,
+      "helperText": "This name is displayed throughout the application."
+    },
+    {
+      "type": "email",
+      "id": "email",
+      "label": "Email Address",
+      "placeholder": "john.doe@example.com",
+      "required": true,
+      "validation": {
+        "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+        "message": "Please enter a valid email address."
+      }
+    },
+    {
+      "type": "tel",
+      "id": "phoneNumber",
+      "label": "Phone Number",
+      "placeholder": "(555) 555-5555",
+      "required": false,
+      "validation": {
+        "pattern": "^\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}$",
+        "message": "Please enter a valid phone number."
+      }
+    },
+    {
+      "type": "date",
+      "id": "startDate",
+      "label": "Start Date",
+      "required": true
+    },
+    {
+      "type": "select",
+      "id": "department",
+      "label": "Department",
+      "required": true,
+      "options": [
+        {
+          "label": "Engineering",
+          "value": "engineering"
+        },
+        {
+          "label": "Product",
+          "value": "product"
+        },
+        {
+          "label": "Design",
+          "value": "design"
+        },
+        {
+          "label": "Operations",
+          "value": "operations"
+        },
+        {
+          "label": "Sales",
+          "value": "sales"
+        },
+        {
+          "label": "Marketing",
+          "value": "marketing"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "id": "role",
+      "label": "Role",
+      "required": true,
+      "options": [
+        {
+          "label": "Admin",
+          "value": "admin"
+        },
+        {
+          "label": "Manager",
+          "value": "manager"
+        },
+        {
+          "label": "Member",
+          "value": "member"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "managerName",
+      "label": "Manager Name",
+      "placeholder": "Jane Doe",
+      "required": false,
+      "showWhen": {
+        "fieldId": "role",
+        "equals": "member"
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "bio",
+      "label": "Biography",
+      "placeholder": "Tell us a little about yourself...",
+      "required": false,
+      "rows": 4,
+      "maxLength": 500
+    },
+    {
+      "type": "checkbox",
+      "id": "marketingOptIn",
+      "label": "Receive product updates and marketing emails"
+    },
+    {
+      "type": "select",
+      "id": "notificationPreference",
+      "label": "Notification Preference",
+      "required": true,
+      "options": [
+        {
+          "label": "Email",
+          "value": "email"
+        },
+        {
+          "label": "SMS",
+          "value": "sms"
+        },
+        {
+          "label": "In-App Only",
+          "value": "in_app"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "profilePhoto",
+      "label": "Profile Photo",
+      "required": false,
+      "accept": [
+        ".jpg",
+        ".jpeg",
+        ".png"
+      ]
+    }
+  ]
+}

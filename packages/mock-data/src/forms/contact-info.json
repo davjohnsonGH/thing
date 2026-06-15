@@ -1,0 +1,171 @@
+{
+  "id": "contact-info",
+  "version": "1.0.0",
+  "title": "Contact Information",
+  "description": "Primary contact details for an individual or business representative.",
+  "fields": [
+    {
+      "type": "text",
+      "id": "firstName",
+      "label": "First Name",
+      "placeholder": "John",
+      "required": true,
+      "maxLength": 50
+    },
+    {
+      "type": "text",
+      "id": "lastName",
+      "label": "Last Name",
+      "placeholder": "Doe",
+      "required": true,
+      "maxLength": 50
+    },
+    {
+      "type": "email",
+      "id": "email",
+      "label": "Email Address",
+      "placeholder": "john.doe@example.com",
+      "required": true,
+      "validation": {
+        "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+        "message": "Please enter a valid email address."
+      }
+    },
+    {
+      "type": "tel",
+      "id": "phoneNumber",
+      "label": "Phone Number",
+      "placeholder": "(555) 555-5555",
+      "required": true,
+      "validation": {
+        "pattern": "^\\(?\\d{3}\\)?[-.\\s]?\\d{3}[-.\\s]?\\d{4}$",
+        "message": "Please enter a valid phone number."
+      }
+    },
+    {
+      "type": "text",
+      "id": "companyName",
+      "label": "Company Name",
+      "placeholder": "Acme Construction",
+      "required": false,
+      "maxLength": 100
+    },
+    {
+      "type": "select",
+      "id": "contactType",
+      "label": "Contact Type",
+      "required": true,
+      "options": [
+        {
+          "label": "Homeowner",
+          "value": "homeowner"
+        },
+        {
+          "label": "Contractor",
+          "value": "contractor"
+        },
+        {
+          "label": "Architect",
+          "value": "architect"
+        },
+        {
+          "label": "Engineer",
+          "value": "engineer"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "streetAddress",
+      "label": "Street Address",
+      "placeholder": "123 Main Street",
+      "required": true,
+      "maxLength": 150
+    },
+    {
+      "type": "text",
+      "id": "city",
+      "label": "City",
+      "placeholder": "Springfield",
+      "required": true,
+      "maxLength": 80
+    },
+    {
+      "type": "select",
+      "id": "state",
+      "label": "State",
+      "required": true,
+      "options": [
+        {
+          "label": "California",
+          "value": "CA"
+        },
+        {
+          "label": "Oregon",
+          "value": "OR"
+        },
+        {
+          "label": "Washington",
+          "value": "WA"
+        },
+        {
+          "label": "Nevada",
+          "value": "NV"
+        },
+        {
+          "label": "Arizona",
+          "value": "AZ"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "zipCode",
+      "label": "ZIP Code",
+      "placeholder": "12345",
+      "required": true,
+      "validation": {
+        "pattern": "^\\d{5}(-\\d{4})?$",
+        "message": "Please enter a valid ZIP code."
+      }
+    },
+    {
+      "type": "radio",
+      "id": "preferredContactMethod",
+      "label": "Preferred Contact Method",
+      "required": true,
+      "options": [
+        {
+          "label": "Email",
+          "value": "email"
+        },
+        {
+          "label": "Phone",
+          "value": "phone"
+        },
+        {
+          "label": "Text Message",
+          "value": "sms"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "allowVoicemail",
+      "label": "Permission to leave voicemail messages"
+    },
+    {
+      "type": "textarea",
+      "id": "notes",
+      "label": "Additional Notes",
+      "placeholder": "Enter any additional contact information...",
+      "required": false,
+      "rows": 4,
+      "maxLength": 1000
+    }
+  ]
+}

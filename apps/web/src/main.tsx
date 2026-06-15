@@ -1,19 +1,11 @@
 import ReactDOM from "react-dom/client";
-import { Button } from "@repo/design-system";
-import type { User } from "@repo/types";
+import userProfile from "@repo/mock-data/forms/user-profile";
+import { SchemaForm } from "@repo/form-engine";
 
 function App() {
-  const user: User = {
-    id: "1",
-    name: "Frank",
-    email: "frank@example.com",
-    role: "admin",
-  };
   return (
     <div>
-      <h1>Hello {user.name}</h1>
-      <h1>Role {user.role}</h1>
-      <Button>Design System Button</Button>
+      <h1>Web App</h1>
     </div>
   );
 }

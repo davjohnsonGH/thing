@@ -1,0 +1,221 @@
+{
+  "id": "permit-application",
+  "version": "1.0.0",
+  "title": "Permit Application",
+  "description": "Project information required to determine permit requirements and begin the permit application process.",
+  "fields": [
+    {
+      "type": "text",
+      "id": "projectName",
+      "label": "Project Name",
+      "placeholder": "Backyard Deck Replacement",
+      "required": true,
+      "maxLength": 100
+    },
+    {
+      "type": "select",
+      "id": "projectType",
+      "label": "Project Type",
+      "required": true,
+      "options": [
+        {
+          "label": "Deck",
+          "value": "deck"
+        },
+        {
+          "label": "Bathroom Remodel",
+          "value": "bathroom_remodel"
+        },
+        {
+          "label": "Kitchen Remodel",
+          "value": "kitchen_remodel"
+        },
+        {
+          "label": "Room Addition",
+          "value": "addition"
+        },
+        {
+          "label": "Garage Conversion",
+          "value": "garage_conversion"
+        },
+        {
+          "label": "Accessory Dwelling Unit (ADU)",
+          "value": "adu"
+        },
+        {
+          "label": "Roof Replacement",
+          "value": "roof"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "id": "projectDescription",
+      "label": "Project Description",
+      "placeholder": "Describe the scope of work...",
+      "required": true,
+      "rows": 5,
+      "maxLength": 2000
+    },
+    {
+      "type": "text",
+      "id": "propertyAddress",
+      "label": "Property Address",
+      "placeholder": "123 Main Street",
+      "required": true,
+      "maxLength": 150
+    },
+    {
+      "type": "text",
+      "id": "city",
+      "label": "City",
+      "placeholder": "Springfield",
+      "required": true,
+      "maxLength": 80
+    },
+    {
+      "type": "select",
+      "id": "state",
+      "label": "State",
+      "required": true,
+      "options": [
+        {
+          "label": "California",
+          "value": "CA"
+        },
+        {
+          "label": "Oregon",
+          "value": "OR"
+        },
+        {
+          "label": "Washington",
+          "value": "WA"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "zipCode",
+      "label": "ZIP Code",
+      "placeholder": "12345",
+      "required": true,
+      "validation": {
+        "pattern": "^\\d{5}(-\\d{4})?$",
+        "message": "Please enter a valid ZIP code."
+      }
+    },
+    {
+      "type": "number",
+      "id": "estimatedProjectCost",
+      "label": "Estimated Project Cost",
+      "placeholder": "15000",
+      "required": true,
+      "min": 0,
+      "step": 100
+    },
+    {
+      "type": "date",
+      "id": "expectedStartDate",
+      "label": "Expected Start Date",
+      "required": true
+    },
+    {
+      "type": "date",
+      "id": "expectedCompletionDate",
+      "label": "Expected Completion Date",
+      "required": false
+    },
+    {
+      "type": "radio",
+      "id": "ownerOccupied",
+      "label": "Is the property owner occupied?",
+      "required": true,
+      "options": [
+        {
+          "label": "Yes",
+          "value": "yes"
+        },
+        {
+          "label": "No",
+          "value": "no"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "id": "contractorStatus",
+      "label": "Who will perform the work?",
+      "required": true,
+      "options": [
+        {
+          "label": "Owner Builder",
+          "value": "owner_builder"
+        },
+        {
+          "label": "Licensed Contractor",
+          "value": "licensed_contractor"
+        },
+        {
+          "label": "Not Yet Determined",
+          "value": "unknown"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "contractorLicenseNumber",
+      "label": "Contractor License Number",
+      "placeholder": "123456",
+      "required": true,
+      "showWhen": {
+        "fieldId": "contractorStatus",
+        "equals": "licensed_contractor"
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "hoaApprovalRequired",
+      "label": "This project requires HOA approval"
+    },
+    {
+      "type": "textarea",
+      "id": "specialConditions",
+      "label": "Special Site Conditions",
+      "placeholder": "Steep slope, easements, shoreline setback, protected trees, etc.",
+      "required": false,
+      "rows": 4,
+      "maxLength": 1000
+    },
+    {
+      "type": "file",
+      "id": "sitePlan",
+      "label": "Site Plan",
+      "required": false,
+      "accept": [
+        ".pdf",
+        ".jpg",
+        ".jpeg",
+        ".png"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "constructionDrawings",
+      "label": "Construction Drawings",
+      "required": false,
+      "accept": [
+        ".pdf"
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "certifyInformation",
+      "label": "I certify that the information provided is accurate and complete.",
+      "required": true
+    }
+  ]
+}
