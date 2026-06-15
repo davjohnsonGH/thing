@@ -1,5 +1,4 @@
 import ReactDOM from "react-dom/client";
-import { Button } from "@repo/design-system";
 import type { User } from "@repo/types";
 
 function App() {
@@ -14,8 +13,6 @@ function App() {
     <div>
       <h1>Admin Portal</h1>
       <p>{user.name}</p>
-
-      <Button>Delete User</Button>
     </div>
   );
 }

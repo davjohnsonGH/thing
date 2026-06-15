@@ -1,0 +1,33 @@
+{
+  "id": "territory-plan",
+  "version": "1.0.0",
+  "title": "Territory Plan",
+  "description": "Quarterly territory planning.",
+  "fields": [
+    {
+      "type": "text",
+      "id": "territoryName",
+      "label": "Territory Name",
+      "required": true
+    },
+    {
+      "type": "date",
+      "id": "planStartDate",
+      "label": "Plan Start Date",
+      "required": true
+    },
+    {
+      "type": "date",
+      "id": "planEndDate",
+      "label": "Plan End Date",
+      "required": true
+    },
+    {
+      "type": "textarea",
+      "id": "objectives",
+      "label": "Objectives",
+      "required": true,
+      "rows": 5
+    }
+  ]
+}

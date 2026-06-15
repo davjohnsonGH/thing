@@ -5,23 +5,25 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "dependencies": {
-    "@repo/types": "*"
-  },
-  "devDependencies": {
-    "@repo/tsconfig": "*"
-  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    }
-  },
-  "peerDependencies": {
-    "react": "^19.0.0"
+    },
+    "./styles.css": "./dist/index.css"
   },
   "scripts": {
-    "build": "tsc",
-    "typecheck": "tsc --noEmit"
+    "build": "vite build && tsc"
+  },
+  "peerDependencies": {
+    "react": "latest"
+  },
+  "devDependencies": {
+    "@repo/tsconfig": "*",
+    "@types/node": "^25.9.3",
+    "@types/react": "latest",
+    "@vitejs/plugin-react": "latest",
+    "typescript": "latest",
+    "vite": "latest"
   }
 }

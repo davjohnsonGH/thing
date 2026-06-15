@@ -1,0 +1,36 @@
+{
+  "id": "hcp-profile",
+  "version": "1.0.0",
+  "title": "Healthcare Professional Profile",
+  "description": "Healthcare professional details.",
+  "fields": [
+    {
+      "type": "text",
+      "id": "hcpName",
+      "label": "Full Name",
+      "required": true
+    },
+    {
+      "type": "text",
+      "id": "npi",
+      "label": "NPI Number",
+      "required": true
+    },
+    {
+      "type": "select",
+      "id": "specialty",
+      "label": "Specialty",
+      "required": true,
+      "options": [
+        { "label": "Cardiology", "value": "cardiology" },
+        { "label": "Oncology", "value": "oncology" },
+        { "label": "Dermatology", "value": "dermatology" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "keyOpinionLeader",
+      "label": "Key Opinion Leader"
+    }
+  ]
+}

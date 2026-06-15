@@ -1,0 +1,38 @@
+{
+  "id": "sample-request",
+  "version": "1.0.0",
+  "title": "Sample Request",
+  "description": "Request product samples.",
+  "fields": [
+    {
+      "type": "select",
+      "id": "product",
+      "label": "Product",
+      "required": true,
+      "options": [
+        { "label": "Product A", "value": "product_a" },
+        { "label": "Product B", "value": "product_b" }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "quantity",
+      "label": "Quantity",
+      "required": true,
+      "min": 1,
+      "max": 24
+    },
+    {
+      "type": "text",
+      "id": "hcpName",
+      "label": "Healthcare Professional",
+      "required": true
+    },
+    {
+      "type": "checkbox",
+      "id": "sampleAgreement",
+      "label": "Sample compliance agreement acknowledged",
+      "required": true
+    }
+  ]
+}

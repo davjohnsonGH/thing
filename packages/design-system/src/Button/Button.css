@@ -1,0 +1,41 @@
+.ds-button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.ds-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ds-button--primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.ds-button--primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.ds-button--secondary {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.ds-button--secondary:hover:not(:disabled) {
+  background-color: #d1d5db;
+}
+
+.ds-button--danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.ds-button--danger:hover:not(:disabled) {
+  background-color: #b91c1c;
+}

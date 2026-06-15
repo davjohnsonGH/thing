@@ -1,0 +1,37 @@
+{
+  "id": "account-profile",
+  "version": "1.0.0",
+  "title": "Account Profile",
+  "description": "Customer account information.",
+  "fields": [
+    {
+      "type": "text",
+      "id": "accountName",
+      "label": "Account Name",
+      "required": true
+    },
+    {
+      "type": "select",
+      "id": "accountType",
+      "label": "Account Type",
+      "required": true,
+      "options": [
+        { "label": "Hospital", "value": "hospital" },
+        { "label": "Clinic", "value": "clinic" },
+        { "label": "Health System", "value": "health_system" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "primaryContact",
+      "label": "Primary Contact",
+      "required": true
+    },
+    {
+      "type": "textarea",
+      "id": "notes",
+      "label": "Account Notes",
+      "rows": 4
+    }
+  ]
+}

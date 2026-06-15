@@ -17,8 +17,11 @@ export type BaseField = {
   id: string;
   label: string;
   required?: boolean;
+  disabled?: boolean;
+  readOnly?: boolean;
   helperText?: string;
   placeholder?: string;
+  defaultValue?: string | number | boolean;
   showWhen?: ShowWhen;
 };
 
@@ -29,17 +32,23 @@ export type TextField = BaseField & {
   validation?: ValidationRule;
 };
 
-export type TextareaField = BaseField & {
-  type: "textarea";
-  rows?: number;
-  maxLength?: number;
-};
-
 export type NumberField = BaseField & {
   type: "number";
   min?: number;
   max?: number;
   step?: number;
+};
+
+export type DateField = BaseField & {
+  type: "date";
+  min?: string;
+  max?: string;
+};
+
+export type TextareaField = BaseField & {
+  type: "textarea";
+  rows?: number;
+  maxLength?: number;
 };
 
 export type SelectField = BaseField & {
@@ -54,12 +63,6 @@ export type RadioField = BaseField & {
 
 export type CheckboxField = BaseField & {
   type: "checkbox";
-};
-
-export type DateField = BaseField & {
-  type: "date";
-  min?: string;
-  max?: string;
 };
 
 export type FileField = BaseField & {

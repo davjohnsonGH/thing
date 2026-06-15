@@ -1,0 +1,112 @@
+{
+  "id": "call-report",
+  "version": "1.0.0",
+  "title": "Call Report",
+  "description": "Field engagement report for documenting an interaction with a healthcare professional.",
+  "fields": [
+    {
+      "type": "text",
+      "id": "accountName",
+      "label": "Account Name",
+      "placeholder": "Springfield Medical Group",
+      "required": true,
+      "maxLength": 120
+    },
+    {
+      "type": "text",
+      "id": "hcpName",
+      "label": "Healthcare Professional",
+      "placeholder": "Dr. Jane Doe",
+      "required": true,
+      "maxLength": 120
+    },
+    {
+      "type": "date",
+      "id": "callDate",
+      "label": "Call Date",
+      "required": true
+    },
+    {
+      "type": "select",
+      "id": "callType",
+      "label": "Call Type",
+      "required": true,
+      "options": [
+        { "label": "In Person", "value": "in_person" },
+        { "label": "Remote", "value": "remote" },
+        { "label": "Phone", "value": "phone" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "productDiscussed",
+      "label": "Product Discussed",
+      "required": true,
+      "options": [
+        { "label": "Product A", "value": "product_a" },
+        { "label": "Product B", "value": "product_b" },
+        { "label": "Product C", "value": "product_c" }
+      ]
+    },
+    {
+      "type": "radio",
+      "id": "samplesRequested",
+      "label": "Were samples requested?",
+      "required": true,
+      "options": [
+        { "label": "Yes", "value": "yes" },
+        { "label": "No", "value": "no" }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "sampleQuantity",
+      "label": "Sample Quantity",
+      "required": true,
+      "min": 1,
+      "max": 24,
+      "showWhen": {
+        "fieldId": "samplesRequested",
+        "equals": "yes"
+      }
+    },
+    {
+      "type": "radio",
+      "id": "medicalInquiry",
+      "label": "Did the HCP ask a medical inquiry?",
+      "required": true,
+      "options": [
+        { "label": "Yes", "value": "yes" },
+        { "label": "No", "value": "no" }
+      ]
+    },
+    {
+      "type": "textarea",
+      "id": "medicalInquiryDetails",
+      "label": "Medical Inquiry Details",
+      "placeholder": "Document the inquiry without adding promotional claims.",
+      "required": true,
+      "rows": 4,
+      "maxLength": 1000,
+      "showWhen": {
+        "fieldId": "medicalInquiry",
+        "equals": "yes"
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "callNotes",
+      "label": "Call Notes",
+      "placeholder": "Summarize the interaction...",
+      "required": false,
+      "rows": 5,
+      "maxLength": 2000
+    },
+    {
+      "type": "checkbox",
+      "id": "complianceAcknowledgement",
+      "label": "I certify this call report is accurate and compliant with company policy.",
+      "required": true
+    }
+  ]
+}

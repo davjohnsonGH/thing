@@ -1,4 +1,3 @@
-import { Button } from "@repo/design-system";
 import type { FormSchema } from "./types";
 
 type SchemaFormProps = {
@@ -9,8 +8,6 @@ export function SchemaForm({ schema }: SchemaFormProps) {
   return (
     <form>
       <h2>{schema.title}</h2>
-
-      <Button>Submit</Button>
     </form>
   );
 }

@@ -1,0 +1,38 @@
+{
+  "id": "content-approval",
+  "version": "1.0.0",
+  "title": "Content Approval",
+  "description": "Submit content for review and approval.",
+  "fields": [
+    {
+      "type": "text",
+      "id": "contentTitle",
+      "label": "Content Title",
+      "required": true
+    },
+    {
+      "type": "select",
+      "id": "contentType",
+      "label": "Content Type",
+      "required": true,
+      "options": [
+        { "label": "Email", "value": "email" },
+        { "label": "Presentation", "value": "presentation" },
+        { "label": "Leave Behind", "value": "leave_behind" }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "contentFile",
+      "label": "Upload Content",
+      "required": true,
+      "accept": [".pdf", ".pptx"]
+    },
+    {
+      "type": "textarea",
+      "id": "approvalNotes",
+      "label": "Approval Notes",
+      "rows": 4
+    }
+  ]
+}

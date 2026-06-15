@@ -1,0 +1,37 @@
+{
+  "id": "medical-inquiry",
+  "version": "1.0.0",
+  "title": "Medical Inquiry",
+  "description": "Capture a medical inquiry from an HCP.",
+  "fields": [
+    {
+      "type": "text",
+      "id": "hcpName",
+      "label": "Healthcare Professional",
+      "required": true
+    },
+    {
+      "type": "date",
+      "id": "inquiryDate",
+      "label": "Inquiry Date",
+      "required": true
+    },
+    {
+      "type": "textarea",
+      "id": "question",
+      "label": "Question",
+      "required": true,
+      "rows": 5
+    },
+    {
+      "type": "radio",
+      "id": "offLabel",
+      "label": "Off-label Discussion",
+      "required": true,
+      "options": [
+        { "label": "Yes", "value": "yes" },
+        { "label": "No", "value": "no" }
+      ]
+    }
+  ]
+}
