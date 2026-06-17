@@ -1,23 +1,25 @@
 import ReactDOM from "react-dom/client";
-import { callReport } from "@repo/mock-data";
-import { FieldRenderer } from "@repo/form-engine";
-import type { FormSchema } from "@repo/form-engine";
-import { Button } from "@repo/design-system";
+
 import "@repo/design-system/styles.css";
 
-const callReportSchema = callReport as FormSchema;
+import { SchemaForm } from "@repo/form-engine";
+import type { FormSchema } from "@repo/form-engine";
+import { callReport } from "@repo/mock-data";
+
+const schema = callReport as FormSchema;
 
 function App() {
   return (
-    <div>
-      <h1>Web App</h1>
-      <FieldRenderer schema={callReportSchema} />
-      <Button>Primary</Button>
+    <main>
+      <h1>Vault CRM Demo</h1>
 
-      <Button variant="secondary">Secondary</Button>
-
-      <Button variant="danger">Delete</Button>
-    </div>
+      <SchemaForm
+        schema={schema}
+        onSubmit={(values) => {
+          console.log("Submitted values:", values);
+        }}
+      />
+    </main>
   );
 }
 

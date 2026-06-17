@@ -1,0 +1,18 @@
+.ds-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  cursor: pointer;
+}
+
+.ds-checkbox input {
+  margin: 0;
+}
+
+.ds-checkbox--error {
+  color: #dc2626;
+}
